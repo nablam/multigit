@@ -1,0 +1,13 @@
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\Photon3Unity3D.dll
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\UnityEditor.dll
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\UnityEngine.dll
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\Mono.Cecil.dll
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\nunit.framework.dll
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\Unity.DataContract.dll
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\Photon3Unity3D.xml
+C:\__mainFolder\_gitmultipass\multiplayerGame\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+C:\__mainFolder\_gitmultipass\multiplayerGame\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\__mainFolder\_gitmultipass\multiplayerGame\obj\Debug\Assembly-CSharp-firstpass.pdb
