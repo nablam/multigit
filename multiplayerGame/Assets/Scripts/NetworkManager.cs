@@ -3,13 +3,15 @@ using System.Collections;
 
 public class NetworkManager : MonoBehaviour
 {
-
+    SpawnSpot[] SpawSpots;
     public Camera standbyCam;
 
     public int x;
 
     // Use this for initialization
     void Start(){
+        SpawSpots = GameObject.FindObjectsOfType<SpawnSpot>();
+        //SpawSpots = GameObject.FindObjectsOfType(typeof(SpawnSpot)) as SpawnSpot[];
 
        Connect();
       
@@ -42,6 +44,26 @@ public class NetworkManager : MonoBehaviour
 
     }
     void SpawnPlayer() {
-        PhotonNetwork.Instantiate("Acontroller", Vector3.zero, Quaternion.identity, 0); //group 0 does nothing on cloud
-    }aa
+        if (SpawSpots == null) {
+            Debug.Log("freakout no spawnspots");
+        }
+        SpawnSpot mysp = SpawSpots[Random.Range(0, SpawSpots.Length)];
+
+        GameObject myplayer= (GameObject)  PhotonNetwork.Instantiate("Acontroller", mysp.transform.position, mysp.transform.rotation, 0); //group 0 does nothing on cloud
+        standbyCam.enabled=false;
+
+       // myplayer.GetComponent<MouseLook>().enabled = true;
+       // ((MonoBehaviour)myplayer.GetComponent("MouseLook")).enabled = true;
+        myplayer.GetComponent<FPSInputController>().enabled= true;
+        
+        myplayer.GetComponent<CharacterMotor>().enabled = true;
+        myplayer.transform.FindChild("Main Camera").gameObject.SetActive(true);
+        myplayer.transform.FindChild("Main Camera").GetComponent<MouseLook>().enabled = true;
+
+        //myplayer.transform.FindChild("Main Camera").gameObject.GetComponent<Camera>().enabled = true; // SetActive(true);   
+
+        myplayer.GetComponent<MyNetworkChar>().enabled = false;
+    }
+
+
 }
