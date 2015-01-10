@@ -49,20 +49,23 @@ public class NetworkManager : MonoBehaviour
         }
         SpawnSpot mysp = SpawSpots[Random.Range(0, SpawSpots.Length)];
 
-        GameObject myplayer= (GameObject)  PhotonNetwork.Instantiate("Acontroller", mysp.transform.position, mysp.transform.rotation, 0); //group 0 does nothing on cloud
+       // GameObject myplayer= (GameObject)  PhotonNetwork.Instantiate("Acontroller", mysp.transform.position, mysp.transform.rotation, 0); //group 0 does nothing on cloud
+        GameObject myplayer = (GameObject)PhotonNetwork.Instantiate("RangerPrefab", mysp.transform.position, mysp.transform.rotation, 0); //group 0 does nothing on cloud
         standbyCam.enabled=false;
 
        // myplayer.GetComponent<MouseLook>().enabled = true;
-       // ((MonoBehaviour)myplayer.GetComponent("MouseLook")).enabled = true;
-        myplayer.GetComponent<FPSInputController>().enabled= true;
+        ((MonoBehaviour)myplayer.GetComponent("RangerMovement")).enabled = true;
+        ((MonoBehaviour)myplayer.GetComponent("specialMouseMove")).enabled = true; 
         
-        myplayer.GetComponent<CharacterMotor>().enabled = true;
-        myplayer.transform.FindChild("Main Camera").gameObject.SetActive(true);
-        myplayer.transform.FindChild("Main Camera").GetComponent<MouseLook>().enabled = true;
 
-        //myplayer.transform.FindChild("Main Camera").gameObject.GetComponent<Camera>().enabled = true; // SetActive(true);   
 
-        myplayer.GetComponent<MyNetworkChar>().enabled = false;
+
+        //****Finding the camera
+
+      Transform amIcam=  myplayer.transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0).GetChild(0);
+      Debug.Log("am i cam? " + amIcam.name);
+      amIcam.gameObject.SetActive(true);
+        myplayer.GetComponent<MyNetworkChar>().enabled = true;
     }
 
 
