@@ -17,8 +17,8 @@ Platform assembly: C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANL
 Loading C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.054 seconds
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+- Completed reload, in  0.061 seconds
+desktop: 1920x1080 60Hz; virtual: 3520x1080 at -1600,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\System.Core.dll (this message is harmless)
@@ -39,43 +39,11 @@ IAM   t2
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
+am i cam? Main Camera
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-The observed monobehaviour (RangerPrefab(Clone)) of this PhotonView does not implement OnPhotonSerializeView()!
+IAM   t2
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 

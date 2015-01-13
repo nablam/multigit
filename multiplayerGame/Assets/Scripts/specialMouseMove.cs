@@ -10,8 +10,8 @@ public class specialMouseMove : MonoBehaviour {
     private float minimumX = -360F;
     private float maximumX = 360F;
 
-    private float minimumY = 30F;
-    private float maximumY = 165F;
+    private float minimumY = -60F;
+    private float maximumY = 80F;
 
     private  float rotationX = 0F;
     private float rotationY = 0F;
@@ -19,9 +19,18 @@ public class specialMouseMove : MonoBehaviour {
     Quaternion originalRotation;
 
     Transform t2bone;
-    
 
-    void Update()
+
+    void Awake()
+    {
+       t2bone = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0);
+        Debug.Log("IAM   " + t2bone.name);
+        originalRotation = transform.localRotation;
+
+       
+    }
+
+    void LateUpdate()
     {
 
      
@@ -39,7 +48,7 @@ public class specialMouseMove : MonoBehaviour {
             Quaternion xBODQuaternion = Quaternion.AngleAxis(rotationX, Vector3.up);
             Quaternion yQuaternion = Quaternion.AngleAxis(rotationY, Vector3.up);
 
-            Debug.Log(yQuaternion);
+           // Debug.Log(yQuaternion);
          //   transform.localRotation = originalRotation * xQuaternion * yQuaternion;
           //  t2bone.localRotation = originalRotation * xQuaternion * yQuaternion  ;
             t2bone.localRotation = originalRotation * yQuaternion;
@@ -60,7 +69,7 @@ public class specialMouseMove : MonoBehaviour {
             rotationY = ClampAngle(rotationY, minimumY, maximumY);
 
             Quaternion yQuaternion = Quaternion.AngleAxis(-rotationY, Vector3.right);
-          //  transform.localRotation = originalRotation * yQuaternion;
+            t2bone.localRotation = originalRotation * yQuaternion;
         }
     }
 
@@ -69,12 +78,12 @@ public class specialMouseMove : MonoBehaviour {
   
 
 
-        t2bone = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0);
-        Debug.Log("IAM   " + t2bone.name);
+     //   t2bone = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0);
+     //   Debug.Log("IAM   " + t2bone.name);
         // Make the rigid body not change rotation
-        if (rigidbody)
-            rigidbody.freezeRotation = true;
-        originalRotation = transform.localRotation;
+       // if (rigidbody)
+        //    rigidbody.freezeRotation = true;
+      //  originalRotation = transform.localRotation;
     }
 
     public static float ClampAngle(float angle, float min, float max)

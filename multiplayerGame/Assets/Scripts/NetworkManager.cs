@@ -53,19 +53,17 @@ public class NetworkManager : MonoBehaviour
         GameObject myplayer = (GameObject)PhotonNetwork.Instantiate("RangerPrefab", mysp.transform.position, mysp.transform.rotation, 0); //group 0 does nothing on cloud
         standbyCam.enabled=false;
 
-       // myplayer.GetComponent<MouseLook>().enabled = true;
+
+       // **** turning scripts on
         ((MonoBehaviour)myplayer.GetComponent("RangerMovement")).enabled = true;
-        ((MonoBehaviour)myplayer.GetComponent("specialMouseMove")).enabled = true; 
-        
-
-
-
+        ((MonoBehaviour)myplayer.GetComponent("specialMouseMove")).enabled = true;
+        ((MonoBehaviour)myplayer.GetComponent("MyNetworkChar")).enabled = true; 
+       
         //****Finding the camera
-
       Transform amIcam=  myplayer.transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0).GetChild(0);
       Debug.Log("am i cam? " + amIcam.name);
       amIcam.gameObject.SetActive(true);
-        myplayer.GetComponent<MyNetworkChar>().enabled = true;
+      //  myplayer.GetComponent<MyNetworkChar>().enabled = true;
     }
 
 

@@ -130,9 +130,9 @@ ModelImporter:
     materialName: 0
     materialSearch: 1
   animations:
-    legacyGenerateAnimations: 4
+    legacyGenerateAnimations: 3
     bakeSimulation: 0
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
