@@ -54,9 +54,9 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 		}
 		else
 		{
-			transform.position = pos;
+			transform.position = Vector3.Lerp(transform.position, this.pos, Time.deltaTime *  5f);
 			transform.rotation = rot;
-			t2bone.position = post2;
+			t2bone.position = Vector3.Lerp(t2bone.position, this.post2, Time.deltaTime *  5f);
 			t2bone.rotation = rott2;
 		}
 
@@ -65,38 +65,7 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 
 
 
-    /*
-	public void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info) {
-
-		if (stream.isWriting)
-		{
-			//this is OUR player , we need to send our poeition
-			pos = transform.position;
-			rot = transform.rotation;
-			post2 = t2bone.position;
-			rott2 = t2bone.rotation;
-			stream.Serialize(ref pos);
-			stream.Serialize(ref post2);
-			stream.Serialize(ref rot);
-			stream.Serialize(ref rott2);
-
-
-		}
-		else
-		{
-			stream.Serialize(ref pos);
-			stream.Serialize(ref post2);
-			stream.Serialize(ref rot);
-			stream.Serialize(ref rott2);
-			transform.position=pos ;
-			transform.rotation=rot ;
-			t2bone.position=post2 ;
-			t2bone.rotation=rott2 ;
-
-		}
-	}
-
-	*/
+  
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 
