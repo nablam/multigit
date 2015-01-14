@@ -38,12 +38,12 @@ public class RangerMovement : MonoBehaviour
 		
 		animation.wrapMode = WrapMode.Once;
 		animation.AddClip(jumpClip, "jumping");
-		animation.AddClip(dieClip, "deying");
-        animation.wrapMode = WrapMode.Clamp;
-        animation.AddClip(fallClip, "falling");
+		animation.AddClip(dieClip, "dying");
+		animation.wrapMode = WrapMode.Clamp;
+		animation.AddClip(fallClip, "falling");
 
 
-        animation["jumping"].layer = 7; 
+		animation["jumping"].layer = 7; 
 	 //   Rangert2bone = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0);
 	  //  animation["running"].AddMixingTransform(Rangert2bone);
 
@@ -92,55 +92,55 @@ public class RangerMovement : MonoBehaviour
 	public float speed = 6.0F;
 	public float jumpSpeed = 8.0F;
 	private float gravity = 50.0F;
-    private float vertVelo = 0f;
+	private float vertVelo = 0f;
 	public Vector3 moveDirection = Vector3.zero;
-    public bool isjumping = false;
+	public bool isjumping = false;
 	void Update()
 	{
 		//animation.CrossFade("running");
 
 		moveDirection = transform.rotation * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
 
-        if (moveDirection.magnitude > 1f) moveDirection = moveDirection.normalized;
+		if (moveDirection.magnitude > 1f) moveDirection = moveDirection.normalized;
 
-        if (moveDirection != Vector3.zero)
-            if (moveDirection.z > 0) animation.CrossFade("running");
-            else
-                animation.CrossFade("runningback");
-        else
-            animation.CrossFade("idleing");
+		if (moveDirection != Vector3.zero)
+			if (moveDirection.z > 0) animation.CrossFade("running");
+			else
+				animation.CrossFade("runningback");
+		else
+			animation.CrossFade("idleing");
 
 
-        if (cc.isGrounded)
-        {
-            isjumping = false;
-            vertVelo = -2.20f;
-        }
-        else
-            animation.CrossFade("falling");
+		if (cc.isGrounded)
+		{
+			isjumping = false;
+			vertVelo = -2.20f;
+		}
+		else
+			animation.CrossFade("falling");
 
 		if ( cc.isGrounded &&  Input.GetKeyDown("space"))
 		{
-            vertVelo = jumpSpeed;
-            animation.Stop();
-            Debug.Log("AAAND JUMP");
+			vertVelo = jumpSpeed;
+			animation.Stop();
+			Debug.Log("AAAND JUMP");
 			animation.CrossFade("jumping");
-            isjumping = true;
+			isjumping = true;
 		}
-    
+	
 
 	}
    
 
 	void FixedUpdate() {
 
-        Vector3 distTravel = moveDirection * speed * Time.deltaTime;
+		Vector3 distTravel = moveDirection * speed * Time.deltaTime;
 
-        vertVelo += Physics.gravity.y  * Time.deltaTime;
+		vertVelo += Physics.gravity.y  * Time.deltaTime;
 
-     
-        distTravel.y = vertVelo * Time.deltaTime;
-        cc.Move(distTravel);
+	 
+		distTravel.y = vertVelo * Time.deltaTime;
+		cc.Move(distTravel);
 
 	  //  CharacterController controller = GetComponent<CharacterController>();
 		

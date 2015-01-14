@@ -99,7 +99,7 @@ public class MyNetworkChar : Photon.MonoBehaviour {
             t2bone.position = post2;
             t2bone.rotation = rott2;
 
-            photonView.RPC("DotheWalk", PhotonTargets.All);
+            photonView.RPC("DotheWalk", PhotonTargets.Others);
         }
 
 
@@ -115,7 +115,7 @@ public class MyNetworkChar : Photon.MonoBehaviour {
     [RPC]
     void DotheWalk()
     {
-        animation.CrossFade("running");
+        animation.Play("running");
     }
 	
 
@@ -195,5 +195,14 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 		}
 		
 	}
+    void OnPhotonInstantiate(PhotonMessageInfo info)
+    {
+        //We know there should be instantiation data..get our bools from this PhotonView!
+        object[] objs = photonView.instantiationData; //The instantiate data..
+    
+
+     
+
+    }
 	
 }

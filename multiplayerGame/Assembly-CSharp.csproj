@@ -159,6 +159,8 @@
      <Compile Include="Assets\Scripts\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\RangerMovement.cs" />
      <Compile Include="Assets\Scripts\SpawnSpot.cs" />
+     <Compile Include="Assets\Scripts\animController.cs" />
+     <Compile Include="Assets\Scripts\myFPScontroller.cs" />
      <Compile Include="Assets\Scripts\specialMouseMove.cs" />
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\marcopolo-readme.txt" />
