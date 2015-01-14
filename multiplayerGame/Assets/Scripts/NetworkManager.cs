@@ -6,20 +6,20 @@ public class NetworkManager : MonoBehaviour
     SpawnSpot[] SpawSpots;
     public Camera standbyCam;
 
-    public int x;
+
+
 
     // Use this for initialization
     void Start(){
-        SpawSpots = GameObject.FindObjectsOfType<SpawnSpot>();
-        //SpawSpots = GameObject.FindObjectsOfType(typeof(SpawnSpot)) as SpawnSpot[];
+       
 
+        SpawSpots = GameObject.FindObjectsOfType<SpawnSpot>();
        Connect();
       
     }
 
     void Connect() {
         PhotonNetwork.ConnectUsingSettings("v0.0.1");
-       // PhotonNetwork.offlineMode = true;
     }
 
 

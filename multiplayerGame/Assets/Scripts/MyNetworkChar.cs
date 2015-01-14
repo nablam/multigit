@@ -15,8 +15,11 @@ public class MyNetworkChar : Photon.MonoBehaviour {
     private Quaternion rott2 = Quaternion.identity;
 
     Transform t2bone;
+	public int y=90;
+    public AnimationClip runClip;
 	// Use this for initialization
 	void Start () {
+        animation.AddClip(runClip, "running");
 		PhotonNetwork.sendRate = 20;
 		PhotonNetwork.sendRateOnSerialize = 10;
 
@@ -24,9 +27,11 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 		//correctPlayerT2BONEPos = t2bone.position;
 		//correctPlayerT2BONERot = t2bone.rotation;
 	}
-	
+ //   void FixedUpdate() { animation.CrossFade("running"); }
 	// Update is called once per frame
 	void Update () {
+      //  photonView.RPC("doruns", PhotonTargets.All); 
+        
 		/*
 		if (photonView.isMine)
 		{
@@ -46,22 +51,28 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 	*/
 		if (photonView.isMine)
 		{
-			pos = transform.position;
-			rot = transform.rotation;
-			post2 = t2bone.position;
-			rott2 = t2bone.rotation;
+		//	pos = transform.position;
+		//	rot = transform.rotation;
+		//	post2 = t2bone.position;
+		//	rott2 = t2bone.rotation;
 
 		}
 		else
 		{
+             
+            photonView.RPC("doruns", PhotonTargets.All );
+            animation.Play("running");
 			transform.position = Vector3.Lerp(transform.position, this.pos, Time.deltaTime *  5f);
 			transform.rotation = rot;
-			t2bone.position = Vector3.Lerp(t2bone.position, this.post2, Time.deltaTime *  5f);
+			t2bone.position = Vector3.Lerp(t2bone.position, this.post2, Time.deltaTime *  0.5f);
 			t2bone.rotation = rott2;
 		}
 
 
 	}
+
+    [RPC]
+    public void doruns() { animation.Play("running"); }
 
 
 

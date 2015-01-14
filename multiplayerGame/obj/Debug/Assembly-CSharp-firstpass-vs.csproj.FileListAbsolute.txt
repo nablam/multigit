@@ -11,3 +11,16 @@ C:\__mainFolder\_gitmultipass\multiplayerGame\Temp\bin\Debug\Photon3Unity3D.xml
 C:\__mainFolder\_gitmultipass\multiplayerGame\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
 C:\__mainFolder\_gitmultipass\multiplayerGame\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\__mainFolder\_gitmultipass\multiplayerGame\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\Photon3Unity3D.dll
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\UnityEditor.dll
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\UnityEngine.dll
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\nunit.framework.dll
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\Temp\bin\Debug\Photon3Unity3D.xml
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\lamriben\Documents\GitHub\multigit\multiplayerGame\obj\Debug\Assembly-CSharp-firstpass.pdb
