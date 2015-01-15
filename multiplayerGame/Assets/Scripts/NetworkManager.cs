@@ -8,6 +8,8 @@ public class NetworkManager : MonoBehaviour
 
     public int x;
 
+    public bool offlinemode = false;
+
     // Use this for initialization
     void Start(){
         SpawSpots = GameObject.FindObjectsOfType<SpawnSpot>();
@@ -18,8 +20,9 @@ public class NetworkManager : MonoBehaviour
     }
 
     void Connect() {
+        if (offlinemode) PhotonNetwork.offlineMode = true;
+        else
         PhotonNetwork.ConnectUsingSettings("v0.0.1");
-       // PhotonNetwork.offlineMode = true;
     }
 
 

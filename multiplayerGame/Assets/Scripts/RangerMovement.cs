@@ -36,32 +36,22 @@ public class RangerMovement : MonoBehaviour
 	private float vertVelo = 0f;
 	public Vector3 moveDirection = Vector3.zero;
 	public bool isjumping = false;
+    public float movingdircashed;
 	void Update()
 	{
+        
 
 		moveDirection = transform.rotation * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
 
-		if (moveDirection.magnitude > 1f) moveDirection = moveDirection.normalized;
+		//if (moveDirection.magnitude > 1f) moveDirection = moveDirection.normalized;
+        movingdircashed = moveDirection.magnitude;
+        if (Input.GetAxis("Vertical") < 0) movingdircashed = movingdircashed * -1;
 
-        Anim.SetFloat("speed_param", moveDirection.magnitude);	
-	
-        /*
-		if (cc.isGrounded)
-		{
-			isjumping = false;
-			vertVelo = -1.20f;
-		}
+        Anim.SetFloat("speed_param", movingdircashed);
 
+       // Debug.Log("moving " + movingdircashed);
 
-		if ( cc.isGrounded &&  Input.GetKeyDown("space"))
-		{
-			vertVelo = jumpSpeed;
-			
-			Debug.Log("AAAND JUMP");
-
-			isjumping = true;
-		}
-     */
+        
 
         if (cc.isGrounded)
         {
@@ -72,7 +62,7 @@ public class RangerMovement : MonoBehaviour
             }
 
             else
-                vertVelo = -1.20f;
+                vertVelo = -0.20f;
         }
         else
         {
