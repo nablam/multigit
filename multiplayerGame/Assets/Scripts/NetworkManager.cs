@@ -55,11 +55,10 @@ public class NetworkManager : MonoBehaviour
 
 
        // **** turning scripts on
-      //  ((MonoBehaviour)myplayer.GetComponent("RangerMovement")).enabled = true;
+        ((MonoBehaviour)myplayer.GetComponent("RangerMovement")).enabled = true;
         ((MonoBehaviour)myplayer.GetComponent("specialMouseMove")).enabled = true;
-        ((MonoBehaviour)myplayer.GetComponent("MyNetworkChar")).enabled = true;
-        ((MonoBehaviour)myplayer.GetComponent("animController")).enabled = true;
-        ((MonoBehaviour)myplayer.GetComponent("myFPScontroller")).enabled = true;  
+      //  ((MonoBehaviour)myplayer.GetComponent("MyNetworkChar")).enabled = true;
+    //    ((MonoBehaviour)myplayer.GetComponent("myFPScontroller")).enabled = true;  
         //****Finding the camera
       Transform amIcam=  myplayer.transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0).GetChild(0);
       Debug.Log("am i cam? " + amIcam.name);

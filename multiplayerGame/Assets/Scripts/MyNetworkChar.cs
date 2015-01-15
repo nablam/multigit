@@ -35,41 +35,13 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 		//correctPlayerT2BONEPos = t2bone.position;
 		//correctPlayerT2BONERot = t2bone.rotation;
 
-        animation.wrapMode = WrapMode.Loop;
-        animation.AddClip(idleClip, "idleing");
-        animation.AddClip(runClip, "running");
-        animation.AddClip(runBackClip, "runningback");
-
-        animation.wrapMode = WrapMode.Once;
-        animation.AddClip(jumpClip, "jumping");
-        animation.AddClip(dieClip, "deying");
-        animation.wrapMode = WrapMode.Clamp;
-        animation.AddClip(fallClip, "falling");
-
-
-        animation["jumping"].layer = 7;
+   
  
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		/*
-		if (photonView.isMine)
-		{
-			//do nothing, ou controller if handelling the motion
-		}
-
-		else
-		{
-			//lerp from ewhere we thik they are to whwre they are 
-			transform.position = Vector3.Lerp(transform.position, this.correctPlayerPos, Time.deltaTime * 0.1f);
-			transform.rotation = Quaternion.Lerp(transform.rotation, this.correctPlayerRot, Time.deltaTime * 0.1f);
-
-			t2bone.position = Vector3.Lerp(t2bone.position, this.correctPlayerT2BONEPos, Time.deltaTime * 0.1f);
-			t2bone.rotation = Quaternion.Lerp(t2bone.rotation, this.correctPlayerT2BONERot, Time.deltaTime * 0.1f);
-		}
-	   // GetComponent<PhotonView>().isMine
-	*/
+	
 		if (photonView.isMine)
 		{
           
@@ -85,13 +57,7 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 		}
 		else
 		{
-          /*
-          //working block for simple pos and rot 
-          transform.position = pos;
-          transform.rotation = rot;
-          t2bone.position = post2;
-          t2bone.rotation = rott2;
-          */
+     
 
             transform.position = Vector3.Lerp(transform.position, this.pos, Time.deltaTime * 0.05f);
             transform.rotation = Quaternion.Lerp(transform.rotation, this.rot, Time.deltaTime * 0.05f);
@@ -99,7 +65,7 @@ public class MyNetworkChar : Photon.MonoBehaviour {
             t2bone.position = post2;
             t2bone.rotation = rott2;
 
-            photonView.RPC("DotheWalk", PhotonTargets.Others);
+           
         }
 
 
@@ -112,46 +78,10 @@ public class MyNetworkChar : Photon.MonoBehaviour {
     public AnimationClip fallClip;
     public AnimationClip dieClip;
 
-    [RPC]
-    void DotheWalk()
-    {
-        animation.Play("running");
-    }
-	
+  
 
 
-    /*
-	public void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info) {
-
-		if (stream.isWriting)
-		{
-			//this is OUR player , we need to send our poeition
-			pos = transform.position;
-			rot = transform.rotation;
-			post2 = t2bone.position;
-			rott2 = t2bone.rotation;
-			stream.Serialize(ref pos);
-			stream.Serialize(ref post2);
-			stream.Serialize(ref rot);
-			stream.Serialize(ref rott2);
-
-
-		}
-		else
-		{
-			stream.Serialize(ref pos);
-			stream.Serialize(ref post2);
-			stream.Serialize(ref rot);
-			stream.Serialize(ref rott2);
-			transform.position=pos ;
-			transform.rotation=rot ;
-			t2bone.position=post2 ;
-			t2bone.rotation=rott2 ;
-
-		}
-	}
-
-	*/
+   
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 
@@ -195,14 +125,6 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 		}
 		
 	}
-    void OnPhotonInstantiate(PhotonMessageInfo info)
-    {
-        //We know there should be instantiation data..get our bools from this PhotonView!
-        object[] objs = photonView.instantiationData; //The instantiate data..
-    
 
-     
-
-    }
 	
 }
