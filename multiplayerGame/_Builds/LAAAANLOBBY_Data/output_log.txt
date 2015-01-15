@@ -17,39 +17,11 @@ Platform assembly: C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANL
 Loading C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.041 seconds
+- Completed reload, in  0.046 seconds
 desktop: 1920x1080 60Hz; virtual: 3520x1080 at -1600,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\System.Core.dll (this message is harmless)
-The AnimationClip 'idelAction0' used by the Animation component 'RangerTest' must be marked as Legacy.
- 
-(Filename:  Line: 1998)
-
-The AnimationClip 'dieAction' used by the Animation component 'RangerTest' must be marked as Legacy.
- 
-(Filename:  Line: 1998)
-
-The AnimationClip 'dropAction' used by the Animation component 'RangerTest' must be marked as Legacy.
- 
-(Filename:  Line: 1998)
-
-The AnimationClip 'jumpAction' used by the Animation component 'RangerTest' must be marked as Legacy.
- 
-(Filename:  Line: 1998)
-
-The AnimationClip 'PoseLib' used by the Animation component 'RangerTest' must be marked as Legacy.
- 
-(Filename:  Line: 1998)
-
-The AnimationClip 'RunAction' used by the Animation component 'RangerTest' must be marked as Legacy.
- 
-(Filename:  Line: 1998)
-
-Default clip could not be found in attached animations list.
- 
-(Filename:  Line: 395)
-
 The AnimationClip 'idelAction0' used by the Animation component 'RangerPrefab' must be marked as Legacy.
  
 (Filename:  Line: 1998)
@@ -59,10 +31,6 @@ The AnimationClip 'dieAction' used by the Animation component 'RangerPrefab' mus
 (Filename:  Line: 1998)
 
 The AnimationClip 'dropAction' used by the Animation component 'RangerPrefab' must be marked as Legacy.
- 
-(Filename:  Line: 1998)
-
-The AnimationClip 'jumpAction' used by the Animation component 'RangerPrefab' must be marked as Legacy.
  
 (Filename:  Line: 1998)
 
@@ -78,11 +46,11 @@ Default clip could not be found in attached animations list.
  
 (Filename:  Line: 395)
 
-Platform assembly: C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\System.dll (this message is harmless)
 IAM   t2
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
+Platform assembly: C:\__mainFolder\_gitmultipass\multiplayerGame\_Builds\LAAAANLOBBY_Data\Managed\System.dll (this message is harmless)
 ONLanLobby joined!!
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
@@ -104,10 +72,6 @@ The AnimationClip 'dieAction' used by the Animation component 'RangerPrefab(Clon
 (Filename:  Line: 1998)
 
 The AnimationClip 'dropAction' used by the Animation component 'RangerPrefab(Clone)' must be marked as Legacy.
- 
-(Filename:  Line: 1998)
-
-The AnimationClip 'jumpAction' used by the Animation component 'RangerPrefab(Clone)' must be marked as Legacy.
  
 (Filename:  Line: 1998)
 
@@ -140,10 +104,6 @@ The AnimationClip 'dieAction' used by the Animation component 'RangerPrefab(Clon
 (Filename:  Line: 1998)
 
 The AnimationClip 'dropAction' used by the Animation component 'RangerPrefab(Clone)' must be marked as Legacy.
- 
-(Filename:  Line: 1998)
-
-The AnimationClip 'jumpAction' used by the Animation component 'RangerPrefab(Clone)' must be marked as Legacy.
  
 (Filename:  Line: 1998)
 

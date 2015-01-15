@@ -58,6 +58,8 @@ ModelImporter:
     100104: thumbroot_R
     100106: toe_L
     100108: toe_R
+    100110: Cube_005
+    100112: Cube_006
     400000: arm_L
     400002: arm_R
     400004: Armature
@@ -113,7 +115,15 @@ ModelImporter:
     400104: thumbroot_R
     400106: toe_L
     400108: toe_R
+    400110: Cube_005
+    400112: Cube_006
+    2300000: Cube_005
+    2300002: Cube_006
+    3300000: Cube_005
+    3300002: Cube_006
     4300000: Cube
+    4300002: Cube_006
+    4300004: Cube_005
     7400000: BackNURAction
     7400002: dieAction
     7400004: dropAction
@@ -123,6 +133,8 @@ ModelImporter:
     7400012: RunAction
     7400014: idelAction0
     7400016: RunAction0
+    7400018: jumpingaction
+    7400020: fallback
     9500000: //RootNode
     11100000: //RootNode
     13700000: Cube
@@ -139,7 +151,9 @@ ModelImporter:
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 2
-    extraExposedTransformPaths: []
+    extraExposedTransformPaths:
+    - Armature
+    - Armature/Bone/t1/t2
     clipAnimations:
     - serializedVersion: 16
       name: idelAction0
@@ -686,142 +700,6 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: jumpAction
-      takeName: jumpAction
-      firstFrame: -1
-      lastFrame: 14
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Bone
-        weight: 1
-      - path: Armature/Bone/low
-        weight: 1
-      - path: Armature/Bone/low/hip_L
-        weight: 1
-      - path: Armature/Bone/low/hip_L/thigh_L
-        weight: 1
-      - path: Armature/Bone/low/hip_L/thigh_L/knee_L
-        weight: 1
-      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L
-        weight: 1
-      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L/foot_L
-        weight: 1
-      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L/foot_L/toe_L
-        weight: 1
-      - path: Armature/Bone/low/hip_R
-        weight: 1
-      - path: Armature/Bone/low/hip_R/thigh_R
-        weight: 1
-      - path: Armature/Bone/low/hip_R/thigh_R/knee_R
-        weight: 1
-      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R
-        weight: 1
-      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R/foot_R
-        weight: 1
-      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R/foot_R/toe_R
-        weight: 1
-      - path: Armature/Bone/t1
-        weight: 1
-      - path: Armature/Bone/t1/t2
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L/i2_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L/i2_L/i3_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L/m2_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L/m2_L/m3_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L/thumb1_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L/thumb1_L/thumb2_L
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R/i2_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R/i2_R/i3_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R/m2_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R/m2_R/m3_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/GUN
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R/thumb1_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R/thumb1_R/thumb2_R
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/neck
-        weight: 1
-      - path: Armature/Bone/t1/t2/t3/neck/head
-        weight: 1
-      - path: Cube
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
       name: PoseLib
       takeName: PoseLib
       firstFrame: 0
@@ -1098,6 +976,278 @@ ModelImporter:
       takeName: BackNURAction
       firstFrame: -1
       lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/low
+        weight: 1
+      - path: Armature/Bone/low/hip_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L/foot_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L/foot_L/toe_L
+        weight: 1
+      - path: Armature/Bone/low/hip_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R/foot_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R/foot_R/toe_R
+        weight: 1
+      - path: Armature/Bone/t1
+        weight: 1
+      - path: Armature/Bone/t1/t2
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L/i2_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L/i2_L/i3_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L/m2_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L/m2_L/m3_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L/thumb1_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L/thumb1_L/thumb2_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R/i2_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R/i2_R/i3_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R/m2_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R/m2_R/m3_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/GUN
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R/thumb1_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R/thumb1_R/thumb2_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/neck
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/neck/head
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: jumpingaction
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/low
+        weight: 1
+      - path: Armature/Bone/low/hip_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L/foot_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L/foot_L/toe_L
+        weight: 1
+      - path: Armature/Bone/low/hip_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R/foot_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R/foot_R/toe_R
+        weight: 1
+      - path: Armature/Bone/t1
+        weight: 1
+      - path: Armature/Bone/t1/t2
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L/i2_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L/i2_L/i3_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L/m2_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L/m2_L/m3_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L/thumb1_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L/thumb1_L/thumb2_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R/i2_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R/i2_R/i3_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R/m2_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R/m2_R/m3_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/GUN
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R/thumb1_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R/thumb1_R/thumb2_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/neck
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/neck/head
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: fallback
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 14
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

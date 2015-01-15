@@ -61,7 +61,7 @@ public class NetworkManager : MonoBehaviour
     //    ((MonoBehaviour)myplayer.GetComponent("myFPScontroller")).enabled = true;  
         //****Finding the camera
       Transform amIcam=  myplayer.transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0).GetChild(0);
-      Debug.Log("am i cam? " + amIcam.name);
+      //Debug.Log("am i cam? " + amIcam.name);
       amIcam.gameObject.SetActive(true);
       //  myplayer.GetComponent<MyNetworkChar>().enabled = true;
     }

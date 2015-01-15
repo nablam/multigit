@@ -21,17 +21,22 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 
     RangerMovement RM;
 
+    Animator Anim;
 
- 
+    void Awake() {
+
+        t2bone = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0);
+        Anim = transform.GetComponent<Animator>();
+        RM = transform.GetComponent<RangerMovement>();
+    }
 
 	// Use this for initialization
 	void Start () {
-        RM = transform.GetComponent<RangerMovement>();
+    
         
 		PhotonNetwork.sendRate = 20;
 		PhotonNetwork.sendRateOnSerialize = 10;
 
-		t2bone = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0);
 		//correctPlayerT2BONEPos = t2bone.position;
 		//correctPlayerT2BONERot = t2bone.rotation;
 
@@ -71,24 +76,8 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 
 	}
 
-    public AnimationClip idleClip;
-    public AnimationClip runClip;
-    public AnimationClip runBackClip;
-    public AnimationClip jumpClip;
-    public AnimationClip fallClip;
-    public AnimationClip dieClip;
-
-  
-
-
-   
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
-
-	  
-
-	   
-	   // Debug.Log("clearly running ");
 		if (stream.isWriting)
 		{ 
 			//this is OUR player , we need to send our poeition
@@ -106,6 +95,9 @@ public class MyNetworkChar : Photon.MonoBehaviour {
             stream.SendNext(RM.moveDirection);
             stream.SendNext(RM.isjumping);
             stream.SendNext(RM.speed);
+
+            stream.SendNext(Anim.GetFloat("speed_param"));
+            stream.SendNext(Anim.GetBool("jumping_param"));
 		
 		}
 		else
@@ -121,7 +113,8 @@ public class MyNetworkChar : Photon.MonoBehaviour {
             localisjumping = (bool)stream.ReceiveNext();
             localspeed = (float)stream.ReceiveNext();
 
-
+            Anim.SetFloat("speed_param", (float)stream.ReceiveNext());
+            Anim.SetBool("jumping_param", (bool)stream.ReceiveNext());
 		}
 		
 	}

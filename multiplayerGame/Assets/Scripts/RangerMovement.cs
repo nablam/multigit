@@ -40,27 +40,44 @@ public class RangerMovement : MonoBehaviour
 	{
 
 		moveDirection = transform.rotation * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+
 		if (moveDirection.magnitude > 1f) moveDirection = moveDirection.normalized;
 
         Anim.SetFloat("speed_param", moveDirection.magnitude);	
 	
-
-
+        /*
 		if (cc.isGrounded)
 		{
 			isjumping = false;
-			vertVelo = -2.20f;
+			vertVelo = -1.20f;
 		}
 
 
 		if ( cc.isGrounded &&  Input.GetKeyDown("space"))
 		{
 			vertVelo = jumpSpeed;
-			animation.Stop();
+			
 			Debug.Log("AAAND JUMP");
 
 			isjumping = true;
 		}
+     */
+
+        if (cc.isGrounded)
+        {
+            Anim.SetBool("jumping_param", false);
+            if (Input.GetKeyDown("space"))
+            {
+                vertVelo = jumpSpeed;
+            }
+
+            else
+                vertVelo = -1.20f;
+        }
+        else
+        {
+            Anim.SetBool("jumping_param", true);
+        }
 	
 
 	}
