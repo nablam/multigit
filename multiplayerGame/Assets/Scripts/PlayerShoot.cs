@@ -5,7 +5,6 @@ public class PlayerShoot : MonoBehaviour {
     public float fireRate = 0.5f;
     float cooldown = 0f;
     Transform amIcam;
-
     float damage = 25f;
 
     FXmanager fxmngr;
@@ -74,9 +73,12 @@ public class PlayerShoot : MonoBehaviour {
         else
         { 
         //we hit jack shit, but lets do a visual efect anyway 
-            hitPoint = amIcam.position + (amIcam.forward * 100f);
+            //Vector3 low =  new Vector3 (amIcam.position.x,  amIcam.position.y-0.5f,  amIcam.position.z +0.5f);
+            hitPoint = amIcam.position + (amIcam.forward *100);
             fxmngr.GetComponent<PhotonView>().RPC("SniperBulletFX", PhotonTargets.All, amIcam.position, hitPoint);
-
+           // fxmngr.GetComponent<PhotonView>().RPC("SniperBulletFX", PhotonTargets.All, Camera.main.transform.position, hitPoint);
+            Debug.Log("name " + amIcam.name);
+            Debug.Log("pos " + amIcam.position);
         }
 
         cooldown = fireRate;

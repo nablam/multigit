@@ -143,6 +143,8 @@ public class NetworkManager : MonoBehaviour
         // **** turning scripts on
         ((MonoBehaviour)myplayer.GetComponent("RangerMovement")).enabled = true;
         ((MonoBehaviour)myplayer.GetComponent("specialMouseMove")).enabled = true;
+        ((MonoBehaviour)myplayer.GetComponent("PlayerShoot")).enabled = true;
+
         //  ((MonoBehaviour)myplayer.GetComponent("NetworkChar2")).enabled = true;
         //    ((MonoBehaviour)myplayer.GetComponent("myFPScontroller")).enabled = true;  
         //****Finding the camera

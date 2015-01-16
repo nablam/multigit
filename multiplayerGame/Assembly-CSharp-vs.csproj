@@ -162,6 +162,7 @@
      <Compile Include="Assets\Scripts\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\PlayerShoot.cs" />
      <Compile Include="Assets\Scripts\RangerMovement.cs" />
+     <Compile Include="Assets\Scripts\SelfDestruct.cs" />
      <Compile Include="Assets\Scripts\SpawnSpot.cs" />
      <Compile Include="Assets\Scripts\TestAnimation.cs" />
      <Compile Include="Assets\Scripts\animController.cs" />
