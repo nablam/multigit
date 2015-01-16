@@ -38,21 +38,12 @@ public class RangerMovement : MonoBehaviour
 	public bool isjumping = false;
     public float movingdircashed;
 	void Update()
-	{
-        
-
+	{    
 		moveDirection = transform.rotation * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
-
-		//if (moveDirection.magnitude > 1f) moveDirection = moveDirection.normalized;
         movingdircashed = moveDirection.magnitude;
         if (Input.GetAxis("Vertical") < 0) movingdircashed = movingdircashed * -1;
-
         Anim.SetFloat("speed_param", movingdircashed);
-
        // Debug.Log("moving " + movingdircashed);
-
-        
-
         if (cc.isGrounded)
         {
             Anim.SetBool("jumping_param", false);

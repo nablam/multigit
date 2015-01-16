@@ -157,6 +157,7 @@
      <Compile Include="Assets\Scripts\CharMove.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\MyNetworkChar.cs" />
+     <Compile Include="Assets\Scripts\NetworkChar2.cs" />
      <Compile Include="Assets\Scripts\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\PlayerShoot.cs" />
      <Compile Include="Assets\Scripts\RangerMovement.cs" />

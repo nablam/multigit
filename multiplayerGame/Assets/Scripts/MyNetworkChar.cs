@@ -2,14 +2,11 @@
 using System.Collections;
 
 public class MyNetworkChar : Photon.MonoBehaviour {
-	private Vector3 correctPlayerPos = Vector3.zero; // We lerp towards this
-	private Quaternion correctPlayerRot = Quaternion.identity; // We lerp towards this
+    private Vector3 realpos = Vector3.zero; // We lerp towards this
+	private Quaternion realrot = Quaternion.identity; // We lerp towards this
 
-	private Vector3 correctPlayerT2BONEPos = Vector3.zero; // We lerp towards this
-	private Quaternion correctPlayerT2BONERot = Quaternion.identity; // We lerp towards this
-
-    private Vector3 pos=Vector3.zero;
-    private Vector3 post2=Vector3.zero;
+    private Vector3 realpost2 = Vector3.zero; // We lerp towards this
+    private Quaternion realrott2 = Quaternion.identity; // We lerp towards this
 
     private Quaternion rot = Quaternion.identity;
     private Quaternion rott2 = Quaternion.identity;
@@ -24,24 +21,15 @@ public class MyNetworkChar : Photon.MonoBehaviour {
     Animator Anim;
 
     void Awake() {
-
         t2bone = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0);
         Anim = transform.GetComponent<Animator>();
         RM = transform.GetComponent<RangerMovement>();
     }
 
 	// Use this for initialization
-	void Start () {
-    
-        
-		PhotonNetwork.sendRate = 20;
-		PhotonNetwork.sendRateOnSerialize = 10;
-
-		//correctPlayerT2BONEPos = t2bone.position;
-		//correctPlayerT2BONERot = t2bone.rotation;
-
-   
- 
+	void Start () {   
+	//	PhotonNetwork.sendRate = 20;
+	//	PhotonNetwork.sendRateOnSerialize = 10;
 	}
 	
 	// Update is called once per frame
@@ -49,28 +37,12 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 	
 		if (photonView.isMine)
 		{
-          
-			pos = transform.position;
-			rot = transform.rotation;
-			post2 = t2bone.position;
-			rott2 = t2bone.rotation;
-
-         
-
-            //Lerping block 
-
+ 
 		}
 		else
 		{
-     
-
-            transform.position = Vector3.Lerp(transform.position, this.pos, Time.deltaTime * 0.05f);
-            transform.rotation = Quaternion.Lerp(transform.rotation, this.rot, Time.deltaTime * 0.05f);
-
-            t2bone.position = post2;
-            t2bone.rotation = rott2;
-
-           
+            //transform.position = Vector3.Lerp(transform.position, realpos, 0.1f);
+           // transform.rotation = Quaternion.Lerp(transform.rotation, this.rot, Time.deltaTime * 0.05f);      
         }
 
 
@@ -80,34 +52,27 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 	{
 		if (stream.isWriting)
 		{ 
-			//this is OUR player , we need to send our poeition
-            pos = transform.position;
-            rot = transform.rotation;
-            post2 = t2bone.position;
-            rott2 = t2bone.rotation;
+			stream.SendNext(transform.position);
+            stream.SendNext(transform.rotation);
+            stream.SendNext(t2bone.position);
+            stream.SendNext(t2bone.rotation);
 
-
-			stream.SendNext(pos);
-			stream.SendNext(rot);
-			stream.SendNext(post2);
-			stream.SendNext(rott2);
 
             stream.SendNext(RM.moveDirection);
             stream.SendNext(RM.isjumping);
             stream.SendNext(RM.speed);
-
             stream.SendNext(Anim.GetFloat("speed_param"));
-            stream.SendNext(Anim.GetBool("jumping_param"));
-		
+            stream.SendNext(Anim.GetBool("jumping_param"));	
 		}
 		else
 		{ 
 			//this is THEIR player ,  Receive their position , and update our version
 
-            pos = (Vector3)stream.ReceiveNext();
-            rot = (Quaternion)stream.ReceiveNext();
-            post2 = (Vector3)stream.ReceiveNext();
-            rott2  = (Quaternion)stream.ReceiveNext();
+            realpos = (Vector3)stream.ReceiveNext();
+            realrot = (Quaternion)stream.ReceiveNext();
+
+            realpost2 = (Vector3)stream.ReceiveNext();
+            realrott2 = (Quaternion)stream.ReceiveNext();
 
             localMoveDist= (Vector3)stream.ReceiveNext();
             localisjumping = (bool)stream.ReceiveNext();
@@ -119,5 +84,23 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 		
 	}
 
+    void FixedUpdate()
+    {
+
+        if (photonView.isMine)
+        {
+            
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, realpos, 0.1f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, realrot,  0.1f);
+            //t2bone.position = Vector3.Lerp(t2bone.position, realpost2, 0.1f);
+            t2bone.rotation = Quaternion.Lerp(t2bone.rotation, realrott2, 0.1f); 
+
+        }
+
+
+    }
 	
 }
