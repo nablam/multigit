@@ -8,8 +8,15 @@ public class PlayerShoot : MonoBehaviour {
 
     float damage = 25f;
 
+    FXmanager fxmngr;
+
 	// Use this for initialization
 	void Start () {
+        fxmngr = GameObject.FindObjectOfType<FXmanager>();
+        if (fxmngr == null) {
+            Debug.LogError("Yo add an Fxmanager on an object in game");
+        }
+
          amIcam = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0).GetChild(0);
 	}
 	
@@ -29,34 +36,49 @@ public class PlayerShoot : MonoBehaviour {
         Ray ray = new Ray(amIcam.position, amIcam.forward);
         Transform hitTransform;
         Vector3 hitPoint;
-        hitTransform = FindClosestHitObject(ray, out hitPoint);
+        hitTransform = FindClosestHitObject(ray, out hitPoint); //hitpoint is teh coordiante that we hit 
 
         if (hitTransform != null)
         {
-  
+
             //do ricocheyt effect at info.point
             Debug.Log("we hit a " + hitTransform.transform.name);
             Health h = hitTransform.GetComponent<Health>();
 
-            while (h == null && transform.parent) {
+            while (h == null && transform.parent)
+            {
                 hitTransform = hitTransform.parent;
                 h = hitTransform.GetComponent<Health>();
             }
             //once we are here , hit transfiorm may not be the original hit transform 
-            if (h != null) {
+            if (h != null)
+            {
                 PhotonView pv = h.GetComponent<PhotonView>();
-               // h.takeDamage(damage);  //next is the networked version
+                // h.takeDamage(damage);  //next is the networked version
                 if (pv == null) { Debug.Log(" freak out ! no photonview attached"); }
                 else
-                { 
+                {
                     pv.RPC("takeDamage", PhotonTargets.All, damage);
-                 //   pv.RPC("takeDamage", PhotonTargets.MasterClient, damage);
-                
+                    //   pv.RPC("takeDamage", PhotonTargets.MasterClient, damage);
+
                 }
-             
+
+            }
+
+            if (fxmngr != null)
+            {
+                fxmngr.GetComponent<PhotonView>().RPC("SniperBulletFX", PhotonTargets.All, amIcam.position, hitPoint);
             }
 
         }
+        else
+        { 
+        //we hit jack shit, but lets do a visual efect anyway 
+            hitPoint = amIcam.position + (amIcam.forward * 100f);
+            fxmngr.GetComponent<PhotonView>().RPC("SniperBulletFX", PhotonTargets.All, amIcam.position, hitPoint);
+
+        }
+
         cooldown = fireRate;
 
 

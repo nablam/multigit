@@ -20,6 +20,8 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 
     Animator Anim;
 
+    bool gotFirstUpdate = false;
+
     void Awake() {
         t2bone = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0);
         Anim = transform.GetComponent<Animator>();
@@ -68,6 +70,8 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 		{ 
 			//this is THEIR player ,  Receive their position , and update our version
 
+          
+
             realpos = (Vector3)stream.ReceiveNext();
             realrot = (Quaternion)stream.ReceiveNext();
 
@@ -80,6 +84,20 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 
             Anim.SetFloat("speed_param", (float)stream.ReceiveNext());
             Anim.SetBool("jumping_param", (bool)stream.ReceiveNext());
+
+
+            //teleport oponant to real position when they first join the LAAAN LOBBBYY
+            if (gotFirstUpdate == false)
+            {
+                transform.position = realpos;
+                transform.rotation = realrot;
+                t2bone.position = realpost2;
+                t2bone.rotation = realrott2;
+                gotFirstUpdate = true;
+            }
+         
+
+
 		}
 		
 	}
