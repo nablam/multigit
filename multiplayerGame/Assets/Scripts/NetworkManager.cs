@@ -16,6 +16,8 @@ public class NetworkManager : MonoBehaviour
     List<string> chatMessages;
     int maxChatMessages = 5;
 
+    public float respawnTimer = 0f;
+
     // Use this for initialization
     void Start()
     {
@@ -106,7 +108,7 @@ public class NetworkManager : MonoBehaviour
 
     void OnJoinedLobby()
     {
-        Debug.Log("OnJoinedLobby");
+       // Debug.Log("OnJoinedLobby");
         PhotonNetwork.JoinRandomRoom();
     }
 
@@ -135,6 +137,7 @@ public class NetworkManager : MonoBehaviour
         }
 
         SpawnSpot mySpawnSpot = spawnSpots[Random.Range(0, spawnSpots.Length)];
+        Debug.Log("how many spawnp" + spawnSpots.Length);
 
         GameObject myplayer = (GameObject)PhotonNetwork.Instantiate("RangerPrefab", mySpawnSpot.transform.position, mySpawnSpot.transform.rotation, 0); //group 0 does nothing on cloud
         standbyCamera.enabled = false;
@@ -153,6 +156,19 @@ public class NetworkManager : MonoBehaviour
         amIcam.gameObject.SetActive(true);
 
 
+    
+    }
+
+    void Update() {
+        if (respawnTimer > 0) { 
+            //in health grab this Network manger in the Die() lbl 1337
+            respawnTimer -= Time.fixedDeltaTime;
+            if (respawnTimer <= 0) {
+            //time to respawn playa
+                SpawnMyPlayer();
+
+            }
+        }
     
     }
 }

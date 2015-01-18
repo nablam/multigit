@@ -10,7 +10,7 @@ public class specialMouseMove : MonoBehaviour {
     private float minimumX = -360F;
     private float maximumX = 360F;
 
-    private float minimumY = -60F;
+    private float minimumY = -80F;
     private float maximumY = 80F;
 
     private  float rotationX = 0F;
@@ -24,7 +24,7 @@ public class specialMouseMove : MonoBehaviour {
     void Awake()
     {
        t2bone = transform.GetChild(0).GetChild(0).GetChild(1).GetChild(0);
-        Debug.Log("IAM   " + t2bone.name);
+      //  Debug.Log("IAM   " + t2bone.name);
         originalRotation = transform.localRotation;
 
        
@@ -60,7 +60,7 @@ public class specialMouseMove : MonoBehaviour {
             rotationX += Input.GetAxis("Mouse X") * sensitivityX;
             rotationX = ClampAngle(rotationX, minimumX, maximumX);
 
-            Quaternion xQuaternion = Quaternion.AngleAxis(rotationX, Vector3.up);
+        //    Quaternion xQuaternion = Quaternion.AngleAxis(rotationX, Vector3.up);
          //   transform.localRotation = originalRotation * xQuaternion;
         }
         else

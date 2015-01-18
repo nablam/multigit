@@ -8,10 +8,10 @@ public class MyNetworkChar : Photon.MonoBehaviour {
     private Vector3 realpost2 = Vector3.zero; // We lerp towards this
     private Quaternion realrott2 = Quaternion.identity; // We lerp towards this
 
-    private Quaternion rot = Quaternion.identity;
-    private Quaternion rott2 = Quaternion.identity;
+   // private Quaternion rot = Quaternion.identity;
+//    private Quaternion rott2 = Quaternion.identity;
 
-    private Vector3 localMoveDist = Vector3.zero;
+   private Vector3 localMoveDist = Vector3.zero;
     private bool localisjumping = false;
     private float localspeed = 0f;
     Transform t2bone;
@@ -65,6 +65,8 @@ public class MyNetworkChar : Photon.MonoBehaviour {
             stream.SendNext(RM.speed);
             stream.SendNext(Anim.GetFloat("speed_param"));
             stream.SendNext(Anim.GetBool("jumping_param"));	
+            stream.SendNext(Anim.GetBool("die_param"));
+
 		}
 		else
 		{ 
@@ -84,7 +86,8 @@ public class MyNetworkChar : Photon.MonoBehaviour {
 
             Anim.SetFloat("speed_param", (float)stream.ReceiveNext());
             Anim.SetBool("jumping_param", (bool)stream.ReceiveNext());
-
+            Anim.SetBool("die_param", (bool)stream.ReceiveNext());
+            
 
             //teleport oponant to real position when they first join the LAAAN LOBBBYY
             if (gotFirstUpdate == false)
