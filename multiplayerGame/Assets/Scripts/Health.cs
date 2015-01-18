@@ -27,7 +27,7 @@ public class Health : MonoBehaviour {
         }
     }
 
-    void Die(){
+  public  void Die(){
         //if not a player
         
         if (GetComponent<PhotonView>().instantiationId == 0) { Destroy(this.gameObject); }

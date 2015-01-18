@@ -19,6 +19,7 @@ public class RangerMovement : MonoBehaviour
 
 	CharacterController cc;
 	Animator Anim;
+	Health h;
 	#endregion
 
 	// Use this for initialization
@@ -27,7 +28,7 @@ public class RangerMovement : MonoBehaviour
 	   cc=  transform.GetComponent<CharacterController>();
 	   Anim = transform.GetComponent<Animator>();
 	   isDead = false;
-
+	   h = transform.GetComponent<Health>();
 
 	}
 	
@@ -73,12 +74,13 @@ public class RangerMovement : MonoBehaviour
 
 		Vector3 distTravel = moveDirection * speed * Time.deltaTime;
 
-		vertVelo += Physics.gravity.y  * Time.deltaTime;
+		vertVelo += Physics.gravity.y /3 * Time.deltaTime;
 
+		if (transform.position.y < -6.0f) h.Die();
 	 
 		distTravel.y = vertVelo * Time.deltaTime;
 		cc.Move(distTravel);
-		if (cc.isGrounded) this.transform.Translate(Vector3.up * Time.deltaTime, Space.World);
+		//if (cc.isGrounded) this.transform.Translate(Vector3.up * Time.deltaTime, Space.World);
 
 	  //  CharacterController controller = GetComponent<CharacterController>();
 		
