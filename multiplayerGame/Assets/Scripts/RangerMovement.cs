@@ -39,7 +39,7 @@ public class RangerMovement : MonoBehaviour
 	public Vector3 moveDirection = Vector3.zero;
 	public bool isjumping = false;
 	public float movingdircashed;
-	void Update()
+	void LateUpdate()
 	{
 		if (!isDead) {
 

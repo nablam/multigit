@@ -5,7 +5,7 @@ public class PlayerShoot : MonoBehaviour {
 	public float fireRate = 0.5f;
 	float cooldown = 0f;
 	Transform amIcam;
-	float damage = 25f;
+	float damage = 55f;
 
 	FXmanager fxmngr;
 
@@ -35,7 +35,7 @@ public class PlayerShoot : MonoBehaviour {
 		if (cooldown > 0) return;
 		cooldown = fireRate;
 
-		Debug.Log("fireingmahlazpooor");
+		//Debug.Log("fireingmahlazpooor");
 		Ray ray = new Ray(amIcam.position, amIcam.forward);
 		Transform hitTransform;
 		Vector3 hitPoint;
@@ -45,7 +45,7 @@ public class PlayerShoot : MonoBehaviour {
 		{
 
 			//do ricocheyt effect at info.point
-			Debug.Log("we hit a " + hitTransform.transform.name);
+			//Debug.Log("we hit a " + hitTransform.transform.name);
 			Health h = hitTransform.GetComponent<Health>();
 
 			while (h == null && transform.parent)

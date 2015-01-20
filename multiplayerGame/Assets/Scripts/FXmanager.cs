@@ -10,7 +10,7 @@ public class FXmanager : MonoBehaviour {
     [RPC]
     void SniperBulletFX(Vector3 startPos, Vector3 endPos) {
 
-        Debug.Log("BULLET EFFECT --------------->");
+      //  Debug.Log("BULLET EFFECT --------------->");
 
         if (bulletPrefab != null)
         {

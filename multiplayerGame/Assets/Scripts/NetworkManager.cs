@@ -80,6 +80,7 @@ public class NetworkManager : MonoBehaviour
             {
                 connecting = true;
                 Connect();
+
             }
             GUILayout.FlexibleSpace();
             GUILayout.EndVertical();
@@ -120,7 +121,7 @@ public class NetworkManager : MonoBehaviour
 
     void OnJoinedRoom()
     {
-        Debug.Log("OnJoinedRoom");
+     //   Debug.Log("OnJoinedRoom");
 
         connecting = false;
         SpawnMyPlayer();
@@ -128,7 +129,9 @@ public class NetworkManager : MonoBehaviour
 
     void SpawnMyPlayer()
     {
+        Screen.showCursor = false;
         AddChatMessage("Spawning player: " + PhotonNetwork.player.name);
+
 
         if (spawnSpots == null)
         {
@@ -137,16 +140,19 @@ public class NetworkManager : MonoBehaviour
         }
 
         SpawnSpot mySpawnSpot = spawnSpots[Random.Range(0, spawnSpots.Length)];
-        Debug.Log("how many spawnp" + spawnSpots.Length);
+      //  Debug.Log("how many spawnp" + spawnSpots.Length);
 
         GameObject myplayer = (GameObject)PhotonNetwork.Instantiate("RangerPrefab", mySpawnSpot.transform.position, mySpawnSpot.transform.rotation, 0); //group 0 does nothing on cloud
         standbyCamera.enabled = false;
+        //myplayer.GetComponent<TextMesh>().name = RangerLabel
+
 
 
         // **** turning scripts on
         ((MonoBehaviour)myplayer.GetComponent("RangerMovement")).enabled = true;
         ((MonoBehaviour)myplayer.GetComponent("specialMouseMove")).enabled = true;
         ((MonoBehaviour)myplayer.GetComponent("PlayerShoot")).enabled = true;
+      //  ((MonoBehaviour)myplayer.GetComponent("MyNetworkChar")).enabled = true;
 
         //  ((MonoBehaviour)myplayer.GetComponent("NetworkChar2")).enabled = true;
         //    ((MonoBehaviour)myplayer.GetComponent("myFPScontroller")).enabled = true;  
@@ -155,7 +161,8 @@ public class NetworkManager : MonoBehaviour
         //Debug.Log("am i cam? " + amIcam.name);
         amIcam.gameObject.SetActive(true);
 
-
+        //naming
+        myplayer.transform.FindChild("RangerLabel").GetComponent<TextMesh>().text = PhotonNetwork.player.name;
     
     }
 

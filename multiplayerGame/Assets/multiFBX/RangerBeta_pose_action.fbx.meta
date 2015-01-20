@@ -135,6 +135,7 @@ ModelImporter:
     7400016: RunAction0
     7400018: jumpingaction
     7400020: fallback
+    7400022: Default Take
     9500000: //RootNode
     11100000: //RootNode
     13700000: Cube
@@ -1245,6 +1246,142 @@ ModelImporter:
       maskSource: {instanceID: 0}
     - serializedVersion: 16
       name: fallback
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/low
+        weight: 1
+      - path: Armature/Bone/low/hip_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L/foot_L
+        weight: 1
+      - path: Armature/Bone/low/hip_L/thigh_L/knee_L/calf_L/foot_L/toe_L
+        weight: 1
+      - path: Armature/Bone/low/hip_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R/foot_R
+        weight: 1
+      - path: Armature/Bone/low/hip_R/thigh_R/knee_R/calf_R/foot_R/toe_R
+        weight: 1
+      - path: Armature/Bone/t1
+        weight: 1
+      - path: Armature/Bone/t1/t2
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L/i2_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/iroot_L/i1_L/i2_L/i3_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L/m2_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/Bone_004_L_005/m1_L/m2_L/m3_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L/thumb1_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_L/shoulder_L/arm_L/farm_L/hand_L/thumbroot_L/thumb1_L/thumb2_L
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R/i2_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/iroot_R/i1_R/i2_R/i3_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R/m2_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/Bone_004_R_005/m1_R/m2_R/m3_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/GUN
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R/thumb1_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/collar_R/shoulder_R/arm_R/farm_R/hand_R/thumbroot_R/thumb1_R/thumb2_R
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/neck
+        weight: 1
+      - path: Armature/Bone/t1/t2/t3/neck/head
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Default Take
       takeName: Default Take
       firstFrame: 0
       lastFrame: 14
